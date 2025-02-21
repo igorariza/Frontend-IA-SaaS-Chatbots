@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class MessageComponent {\n  constructor(content, sender) {\n    this.content = content;\n    this.sender = sender;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

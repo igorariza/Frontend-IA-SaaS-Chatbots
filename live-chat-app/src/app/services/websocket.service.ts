@@ -1,41 +1,29 @@
+import { Injectable } from '@angular/core';
+import { WebSocketSubject } from 'rxjs/webSocket';
+
+@Injectable({
+  providedIn: 'root'
+})
 export class WebSocketService {
-  private socket: WebSocket;
+  private socket$: WebSocketSubject<any>;
 
-  constructor(private url: string) {
-    this.connect();
+  constructor() {
+    this.socket$ = new WebSocketSubject('ws://localhost:3000');
   }
 
-  private connect(): void {
-    this.socket = new WebSocket(this.url);
-
-    this.socket.onopen = () => {
-      console.log('WebSocket connection established');
-    };
-
-    this.socket.onmessage = (event) => {
-      this.handleMessage(event.data);
-    };
-
-    this.socket.onclose = () => {
-      console.log('WebSocket connection closed, attempting to reconnect...');
-      setTimeout(() => this.connect(), 1000);
-    };
-
-    this.socket.onerror = (error) => {
-      console.error('WebSocket error:', error);
-    };
+  public connect(): void {
+    this.socket$.subscribe(
+      message => console.log('Received message:', message),
+      err => console.error('Error:', err),
+      () => console.log('Connection closed')
+    );
   }
 
-  public sendMessage(message: string): void {
-    if (this.socket.readyState === WebSocket.OPEN) {
-      this.socket.send(message);
-    } else {
-      console.error('WebSocket is not open. Unable to send message.');
-    }
+  public sendMessage(message: any): void {
+    this.socket$.next(message);
   }
 
-  private handleMessage(data: string): void {
-    console.log('Received message:', data);
-    // Handle incoming messages here
+  public joinRoom(room: string): void {
+    this.socket$.next({ action: 'join', room });
   }
 }

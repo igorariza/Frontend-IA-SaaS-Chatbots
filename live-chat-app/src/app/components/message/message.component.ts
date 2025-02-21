@@ -1,9 +1,13 @@
-export class MessageComponent {
-  content: string;
-  sender: string;
+import { Component, Input } from '@angular/core';
 
-  constructor(content: string, sender: string) {
-    this.content = content;
-    this.sender = sender;
-  }
+@Component({
+  selector: 'app-message',
+  templateUrl: './message.component.html',
+  styleUrls: ['./message.component.css']
+})
+export class MessageComponent {
+  @Input() content!: string;
+  @Input() sender!: string;
+
+  constructor() {}
 }

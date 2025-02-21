@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WebSocketService } from './services/websocket.service';
 
 @Component({
@@ -6,22 +6,12 @@ import { WebSocketService } from './services/websocket.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Live Chat Application';
-  messages: string[] = [];
-  newMessage: string = '';
+export class AppComponent implements OnInit {
+  title = 'live-chat-app';
 
-  constructor(private websocketService: WebSocketService) {
+  constructor(private websocketService: WebSocketService) {}
+
+  ngOnInit(): void {
     this.websocketService.connect();
-    this.websocketService.onMessage((message: string) => {
-      this.messages.push(message);
-    });
-  }
-
-  sendMessage() {
-    if (this.newMessage.trim()) {
-      this.websocketService.sendMessage(this.newMessage);
-      this.newMessage = '';
-    }
   }
 }
