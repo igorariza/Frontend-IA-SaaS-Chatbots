@@ -55,11 +55,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "live-chat-app:build"
+            "buildTarget": "live-chat-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "live-chat-app:build:production"
+              "buildTarget": "live-chat-app:build:production"
             }
           }
         },
