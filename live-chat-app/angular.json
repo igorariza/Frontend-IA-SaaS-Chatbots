@@ -107,7 +107,6 @@
       }
     }
   },
-  "defaultProject": "live-chat-app",
   "cli": {
     "analytics": "638e188e-7228-49db-b0d9-60f16804d88c"
   }
