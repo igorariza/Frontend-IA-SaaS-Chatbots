@@ -12,6 +12,7 @@ export class WebSocketService {
   }
 
   public connect(): void {
+    console.log('Connecting to WebSocket server...');
     this.socket$.subscribe(
       message => console.log('Received message:', message),
       err => console.error('Error:', err),
@@ -20,6 +21,7 @@ export class WebSocketService {
   }
 
   public sendMessage(message: any): void {
+    console.log('Sending message:', message);
     this.socket$.next(message);
   }
 

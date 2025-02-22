@@ -15,7 +15,8 @@
     "noImplicitAny": true
   },
   "angularCompilerOptions": {
-    "enableIvy": true
+    "enableIvy": true,
+    "strictInjectionParameters": true
   },
   "include": [
     "src/**/*.ts"
