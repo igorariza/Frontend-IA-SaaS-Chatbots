@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  websocketUrl: 'wss://your-production-websocket-url'
+  websocketUrl: 'wss://live-chat-app-backend.herokuapp.com',
+  apiUrl: 'https://live-chat-app-backend.herokuapp.com'
 };

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: false,\n  websocketUrl: 'ws://localhost:3000',\n  apiUrl: 'http://localhost:3000'\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
