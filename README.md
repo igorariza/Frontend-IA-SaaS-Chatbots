@@ -66,6 +66,10 @@ Open your browser and navigate to `http://localhost:4200`.
 - Messages can be sent and received in real-time.
 - The chat window displays all messages in the current chat room.
 
+## screenshots
+
+![image](https://github.com/user-attachments/assets/cec49522-140b-4537-96b1-008d7711d0fd)
+
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
