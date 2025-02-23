@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'live-chat-app';
+
+  handleMessage(message: string) {
+    console.log('Message received:', message);
+    //Update component chat window
+    
+
+  }
 }

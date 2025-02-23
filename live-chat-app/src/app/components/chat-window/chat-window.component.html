@@ -1,13 +1,17 @@
 <div class="chat-window">
   <div class="messages">
-    <app-message [sender]="'John Doe'" [content]="'Hello, world!'"></app-message>
-    <app-message [sender]="'Jane Doe'" [content]="'Hi, John!'"></app-message>
-    <app-message [sender]="'John Doe'" [content]="'How are you?'"></app-message>
-    <app-message [sender]="'Jane Doe'" [content]="'I am good, thank you!'"></app-message>
-    <app-message [sender]="'John Doe'" [content]="'That is great to hear!'"></app-message>
-    <app-message [sender]="'Jane Doe'" [content]="'Yes, it is!'"></app-message>
-    <app-message [sender]="'John Doe'" [content]="'I have to go now. Bye!'"></app-message>
-    <app-message [sender]="'Jane Doe'" [content]="'Bye, John!'"></app-message>
+    <div class="messages">
+      <app-message [sender]="'John Doe'" [content]="'Hello, world!'"></app-message>
+      <app-message [sender]="'Jane Doe'" [content]="'Hi, John!'"></app-message>
+      <app-message [sender]="'John Doe'" [content]="'How are you?'"></app-message>
+      <app-message [sender]="'Jane Doe'" [content]="'I am good, thank you!'"></app-message>
+      <app-message [sender]="'John Doe'" [content]="'That is great to hear!'"></app-message>
+      <app-message [sender]="'Jane Doe'" [content]="'Yes, it is!'"></app-message>
+      <app-message [sender]="'John Doe'" [content]="'I have to go now. Bye!'"></app-message>
+      <app-message [sender]="'Jane Doe'" [content]="'Bye, John!'"></app-message>
+    </div>
+    <div *ngFor="let message of messages">
+      <app-message [sender]="message.sender" [content]="message.content"></app-message>
+    </div>
   </div>
-  <app-message [sender]="'John Doe'" [content]="'Hello, world!'"></app-message>
 </div>

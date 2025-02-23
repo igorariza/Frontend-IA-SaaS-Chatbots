@@ -1,4 +1,5 @@
 <div class="app-container">
   <img src="assets/images/logo.png" alt="Logo">
   <app-chat-window></app-chat-window>
+  <app-chat-input (messageSent)="handleMessage($event)"></app-chat-input>
 </div>
