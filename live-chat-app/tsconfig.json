@@ -1,12 +1,17 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
     "target": "es2015",
     "module": "esnext",
     "lib": ["es2018", "dom"],
-    "outDir": "./out-tsc/app",
+    "outDir": "./dist/out-tsc",
     "baseUrl": "./",
     "sourceMap": true,
     "declaration": false,
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
@@ -16,6 +21,7 @@
   },
   "angularCompilerOptions": {
     "enableIvy": true,
+    "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
   },
   "include": [

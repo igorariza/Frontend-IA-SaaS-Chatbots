@@ -1,10 +1,13 @@
 <div class="chat-window">
+  <div class="messages">
+    <app-message [sender]="'John Doe'" [content]="'Hello, world!'"></app-message>
+    <app-message [sender]="'Jane Doe'" [content]="'Hi, John!'"></app-message>
+    <app-message [sender]="'John Doe'" [content]="'How are you?'"></app-message>
+    <app-message [sender]="'Jane Doe'" [content]="'I am good, thank you!'"></app-message>
+    <app-message [sender]="'John Doe'" [content]="'That is great to hear!'"></app-message>
+    <app-message [sender]="'Jane Doe'" [content]="'Yes, it is!'"></app-message>
+    <app-message [sender]="'John Doe'" [content]="'I have to go now. Bye!'"></app-message>
+    <app-message [sender]="'Jane Doe'" [content]="'Bye, John!'"></app-message>
+  </div>
   <app-message [sender]="'John Doe'" [content]="'Hello, world!'"></app-message>
 </div>
-
-<!-- <div class="chat-window">
-  <div class="messages">
-    <app-message *ngFor="let message of messages" [message]="message"></app-message>
-  </div>
-  <input type="text" [(ngModel)]="newMessage" (keyup.enter)="sendMessage()" placeholder="Type your message here..." />
-</div> -->

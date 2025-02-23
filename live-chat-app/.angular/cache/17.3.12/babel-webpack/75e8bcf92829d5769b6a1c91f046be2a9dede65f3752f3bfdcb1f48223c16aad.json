@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { ChatWindowComponent } from './components/chat-window/chat-window.component';\nexport const routes = [{\n  path: '',\n  component: ChatWindowComponent\n}];","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
