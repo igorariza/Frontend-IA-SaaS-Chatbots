@@ -1,6 +1,6 @@
 <div class="chat-window">
   <div class="messages">
-    <div class="messages">
+    <!-- <div class="messages">
       <app-message [sender]="'John Doe'" [content]="'Hello, world!'"></app-message>
       <app-message [sender]="'Jane Doe'" [content]="'Hi, John!'"></app-message>
       <app-message [sender]="'John Doe'" [content]="'How are you?'"></app-message>
@@ -9,7 +9,7 @@
       <app-message [sender]="'Jane Doe'" [content]="'Yes, it is!'"></app-message>
       <app-message [sender]="'John Doe'" [content]="'I have to go now. Bye!'"></app-message>
       <app-message [sender]="'Jane Doe'" [content]="'Bye, John!'"></app-message>
-    </div>
+    </div> -->
     <div *ngFor="let message of messages">
       <app-message [sender]="message.sender" [content]="message.content"></app-message>
     </div>
