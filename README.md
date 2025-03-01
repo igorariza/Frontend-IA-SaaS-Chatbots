@@ -68,7 +68,7 @@ Open your browser and navigate to `http://localhost:4200`.
 
 ## screenshots
 
-![image](https://github.com/user-attachments/assets/6d809a10-4f96-43c9-ba75-84fa2cc34471)
+![image](https://github.com/user-attachments/assets/06c74efc-fc33-4446-b7b4-01b490a42578)
 
 ## Contributing
 
